@@ -1,15 +1,18 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Pau from './Pau';
+import Palmares from './Palmares';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <nav className="navbar">
-        <Link to="/" className="nav-link">Inicio</Link>
-        <Link to="/pau" className="nav-link">Pau</Link>
-      </nav>
+<nav className="navbar">
+  <Link to="/" className="nav-link">Inicio</Link>
+  <Link to="/pau" className="nav-link">Pau</Link>
+  <Link to="/palmares" className="nav-link">Palmarès</Link>
+</nav>
+
 
       <Routes>
         <Route path="/" element={
@@ -34,6 +37,7 @@ function App() {
           </div>
         } />
         <Route path="/pau" element={<Pau />} />
+        <Route path="/palmares" element={<Palmares />} />
       </Routes>
     </div>
   );
